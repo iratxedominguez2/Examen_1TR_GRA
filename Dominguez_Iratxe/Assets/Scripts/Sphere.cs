@@ -31,13 +31,13 @@ public class Sphere : MonoBehaviour
         // En desplX se guarda el desplazamiento horizontal que se genera en el controlador (teclado o mando)
         float desplX = Input.GetAxis("Horizontal");
 
-        // Este "if" significa que estás cerca del límite izquierdo (ej: -8f) y sigues intentando moverte a la izquierda (desplX < 0) 
+        // Este "if" significa que estás cerca del límite izquierdo (ej: -4f) y sigues intentando moverte a la izquierda (desplX < 0) 
         // Por lo tanto no puedes moverte (limX = 0f)
         if (transform.position.x <= -4f && desplX < 0)
         {
             limX = 0f;
         }
-        // Este "else if" significa que estás cerca del límite derecho (ej: 8f) y sigues intentando moverte a la derecha (desplX > 0) 
+        // Este "else if" significa que estás cerca del límite derecho (ej: 4f) y sigues intentando moverte a la derecha (desplX > 0) 
         // Por lo tanto no puedes moverte (limX = 0f)
         else if (transform.position.x >= 4f && desplX > 0)
         {
@@ -58,11 +58,11 @@ public class Sphere : MonoBehaviour
         // Para el eje Y se realiza de la misma forma cambiando las variables
         float desplY = Input.GetAxis("Vertical");
 
-        if (transform.position.y <= 0f && desplY < 0)
+        if (transform.position.y <= -2f && desplY < 0)
         {
             limY = 0f;
         }
-        else if (transform.position.y >= 4f && desplY > 0)
+        else if (transform.position.y >= -11f && desplY > 0)
         {
             limY = 0f;
         }
